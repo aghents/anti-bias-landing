@@ -102,7 +102,7 @@ export function Navbar() {
                 pathname == "/nosotros" && "bg-secondary text-primary"
               }`}
             >
-              Quiénes somos + comunidades
+              Quiénes somos + sponsors
             </Link>
           </div>
           <div className="flex gap-3 border-b border-b-slate-700 lg:border-none">
@@ -113,7 +113,7 @@ export function Navbar() {
               id="donar-btn"
               setDefaultMinWidth={false}
             >
-              Revisar donaciones
+              Inscripción a charlas
             </Button>
             <Button
               href="https://www.twitch.tv/javascriptchile"
@@ -123,13 +123,8 @@ export function Navbar() {
               id="twitch-dk-btn"
               setDefaultMinWidth={false}
             >
-              <Image
-                src="./twitch_logo.svg"
-                alt="TechTon Logo"
-                width={20}
-                height={20}
-              />
-              JavaScript Chile
+              
+              Inscripción Dathaton
             </Button>
           </div>
         </div>

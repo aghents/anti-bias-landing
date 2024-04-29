@@ -5,7 +5,7 @@ import { Title } from "../components/Title";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { CounterSubtitle } from "@/components/CounterSubtitle.jsx";
 import { TwitchButton } from "@/components/TwitchButton.jsx";
-import bomberos from "../../public/images/bomberos-bg.webp";
+import space_image from "../../public/images/background-bias.webp";
 import { FadeInBackgroundImages } from "@/components/FadeInBackgroundImages";
 
 import { getMetaData, getViewports } from "@/lib/metadata";
@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <div className="flex w-full relative justify-center items-center">
       <FadeInBackgroundImages
-        className="bg-cover bg-center bg-blend-overlay bg-no-repeat absolute inset-0 blur-[5px] filter brightness-50 opacity-35 shadow-inner -z-10"
-        image={bomberos}
+        className="bg-cover bg-center bg-blend-overlay bg-no-repeat absolute inset-0 blur-[0px] filter brightness-100 opacity-100 shadow-inner -z-10"
+        image={space_image}
       />
       <section className="px-3 pb-12 container mx-auto">
         <div className="flex flex-col items-center gap-3 justify-between mx-auto md:w-4/5 lg:w-3/5 xl:w-2/3">

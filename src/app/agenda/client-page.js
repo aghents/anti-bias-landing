@@ -8,12 +8,16 @@ import talksData from "@/talks/talks.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Agenda() {
-  const [activeDay, setActiveDay] = useState(9);
+  const [activeDay, setActiveDay] = useState(13);
   const talksDay1 = talksData.filter(
-    (item) => new Date(item.startHour).getDate() === 9,
+    (item) => new Date(item.startHour).getDate() === 13,
   );
   const talksDay2 = talksData.filter(
-    (item) => new Date(item.startHour).getDate() === 10,
+    (item) => new Date(item.startHour).getDate() === 14,
+  );
+
+  const talksDay3 = talksData.filter(
+    (item) => new Date(item.startHour).getDate() === 15,
   );
   return (
     <div className="flex flex-col w-full relative justify-center items-center">
@@ -35,19 +39,28 @@ export default function Agenda() {
       <div className="sticky top-0 pt-6 pb-10 w-full h-fit z-10">
         <div className="relative z-10 flex justify-center gap-4 flex-wrap">
           <Button
-            id="day9"
-            variant={`${activeDay === 9 ? "primary" : "tertiary"}`}
-            onClick={() => setActiveDay(9)}
+            id="day13"
+            variant={`${activeDay === 13 ? "primary" : "tertiary"}`}
+            onClick={() => setActiveDay(13)}
           >
-            Viernes 9 de Febrero
+            Lunes 13 de Mayo
           </Button>
           <Button
-            id="day10"
-            variant={`${activeDay === 10 ? "primary" : "tertiary"}`}
-            onClick={() => setActiveDay(10)}
+            id="day14"
+            variant={`${activeDay === 14 ? "primary" : "tertiary"}`}
+            onClick={() => setActiveDay(14)}
           >
-            Sábado 10 de Febrero
+            Martes 14 de Mayo
           </Button>
+
+          <Button
+            id="day15"
+            variant={`${activeDay === 15 ? "primary" : "tertiary"}`}
+            onClick={() => setActiveDay(15)}
+          >
+            Miercoles 15 de Mayo
+          </Button>
+
         </div>
         <div
           className="absolute  top-0 bottom-0 left-0 right-0 z-0"
@@ -57,10 +70,12 @@ export default function Agenda() {
           }}
         ></div>
       </div>
+
+
       <AnimatePresence>
-        {activeDay === 9 && (
+        {activeDay === 13 && (
           <motion.div
-            key="day9"
+            key="day13"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -68,14 +83,24 @@ export default function Agenda() {
             <Timeline data={talksDay1} />
           </motion.div>
         )}
-        {activeDay === 10 && (
+        {activeDay === 14 && (
           <motion.div
-            key="day10"
+            key="day14"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <Timeline data={talksDay2} />
+          </motion.div>
+        )}
+        {activeDay === 15 && (
+          <motion.div
+            key="day15"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <Timeline data={talksDay3} />
           </motion.div>
         )}
       </AnimatePresence>

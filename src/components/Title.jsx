@@ -17,7 +17,7 @@ export function Title({ logo }) {
         <Link href="/">{logo}</Link>
       </h1>
       <h2 className="text-lg xl:text-xl text-primary text-inter  mb-4 text-center">
-        Comunidades Tech unidas por una causa
+        Evento de IA Universitario sobre IA Responsable 
       </h2>
     </section>
   );

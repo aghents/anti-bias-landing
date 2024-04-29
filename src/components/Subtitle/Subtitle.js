@@ -15,10 +15,10 @@ export function Subtitle() {
         transitions,
       )}
     >
-      <span className="text-4xl xl:text-6xl">+20 </span>
-      <span className="text-2xl xl:text-3xl">horas de</span>
+      <span className="text-4xl xl:text-6xl">+5 </span>
+      <span className="text-2xl xl:text-3xl"></span>
       <span className="text-2xl xl:text-3xl text-primary relative">
-        Streaming
+        Universidades
         <svg
           className="fill-primary absolute right-0 b top-8 w-100"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export function Subtitle() {
         </svg>
       </span>
       <span className="flex items-center gap-3 mt-5 xxs:mt-0">
-        <span className="text-4xl xl:text-6xl">+40 </span>
+        <span className="text-4xl xl:text-6xl">+20 </span>
         <span className="text-2xl xl:text-3xl">charlistas</span>
       </span>
     </h3>
